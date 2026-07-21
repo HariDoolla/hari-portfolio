@@ -50,21 +50,13 @@ export default function Footer() {
         transition={{ duration: 0.5 }}
       >
         <div className="flex items-center gap-3">
-          <span
-            role="img"
-            aria-label="X (Twitter)"
-            className={`${iconBaseClass} ${iconHoverClass} cursor-default`}
+          <a
+            href={`mailto:${profile.email}`}
+            aria-label={`Send email to ${profile.email}`}
+            className={`${iconBaseClass} ${iconHoverClass} cursor-pointer hover:scale-105`}
           >
-            <XIcon size={18} />
-          </span>
-
-          <span
-            role="img"
-            aria-label="Instagram"
-            className={`${iconBaseClass} ${iconHoverClass} cursor-default`}
-          >
-            <InstagramIcon size={18} />
-          </span>
+            <Mail size={18} />
+          </a>
 
           <a
             href={whatsappUrl}
@@ -78,19 +70,27 @@ export default function Footer() {
 
           <span
             role="img"
+            aria-label="Instagram"
+            className={`${iconBaseClass} ${iconHoverClass} cursor-default`}
+          >
+            <InstagramIcon size={18} />
+          </span>
+
+          <span
+            role="img"
             aria-label="Facebook"
             className={`${iconBaseClass} ${iconHoverClass} cursor-default`}
           >
             <FacebookIcon size={18} />
           </span>
 
-          <a
-            href={`mailto:${profile.email}`}
-            aria-label={`Send email to ${profile.email}`}
-            className={`${iconBaseClass} ${iconHoverClass} cursor-pointer hover:scale-105`}
+          <span
+            role="img"
+            aria-label="X (Twitter)"
+            className={`${iconBaseClass} ${iconHoverClass} cursor-default`}
           >
-            <Mail size={18} />
-          </a>
+            <XIcon size={18} />
+          </span>
         </div>
       </motion.div>
     </footer>

@@ -3,10 +3,27 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, Moon, Sun, X } from 'lucide-react'
 import { navLinks } from '../data/resume'
 import { useTheme } from '../context/ThemeContext'
+import { useActiveSection } from '../hooks/useActiveSection'
+
+const linkBaseClass =
+  'rounded-lg px-3 py-2 text-sm font-medium transition-colors'
+
+const linkInactiveClass =
+  'text-slate-600 hover:bg-white/50 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-brand-400'
+
+const linkActiveClass =
+  'bg-brand-500/10 font-semibold text-brand-700 dark:bg-brand-500/15 dark:text-brand-300'
+
+const mobileLinkInactiveClass =
+  'block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-white/50 dark:text-slate-200 dark:hover:bg-white/5'
+
+const mobileLinkActiveClass =
+  'block rounded-lg bg-brand-500/10 px-3 py-2.5 text-sm font-semibold text-brand-700 dark:bg-brand-500/15 dark:text-brand-300'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
+  const activeHref = useActiveSection(navLinks.map((link) => link.href))
 
   const handleNavClick = (href: string) => {
     setOpen(false)
@@ -35,7 +52,10 @@ export default function Navbar() {
                   e.preventDefault()
                   handleNavClick(link.href)
                 }}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-white/50 hover:text-brand-600 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-brand-400"
+                className={`${linkBaseClass} ${
+                  activeHref === link.href ? linkActiveClass : linkInactiveClass
+                }`}
+                aria-current={activeHref === link.href ? 'page' : undefined}
               >
                 {link.label}
               </a>
@@ -76,7 +96,10 @@ export default function Navbar() {
                       e.preventDefault()
                       handleNavClick(link.href)
                     }}
-                    className="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-white/50 dark:text-slate-200 dark:hover:bg-white/5"
+                    className={
+                      activeHref === link.href ? mobileLinkActiveClass : mobileLinkInactiveClass
+                    }
+                    aria-current={activeHref === link.href ? 'page' : undefined}
                   >
                     {link.label}
                   </a>

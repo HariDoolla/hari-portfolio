@@ -43,12 +43,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             exit={{ opacity: 0, y: 24, scale: 0.97 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="card-surface scrollbar-hide relative z-10 max-h-[90vh] w-full max-w-2xl overflow-y-auto p-6 sm:p-8 shadow-2xl shadow-brand-500/10"
+            className="card-surface relative z-10 flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden shadow-2xl shadow-brand-500/10"
             role="dialog"
             aria-modal="true"
             aria-labelledby="project-modal-title"
           >
-            <div className="flex items-start justify-between gap-4">
+            <div className="flex shrink-0 items-start justify-between gap-4 border-b border-slate-200/70 p-6 pb-4 dark:border-slate-700/60 sm:p-8 sm:pb-5">
               <div className="min-w-0 flex-1">
                 <p className="text-xs font-semibold tracking-widest text-brand-600 uppercase dark:text-brand-400">
                   Project Details
@@ -71,45 +71,47 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               </button>
             </div>
 
-            <div className="mt-5 flex flex-wrap gap-4 text-sm">
-              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
-                <Building2 size={16} className="shrink-0 text-brand-500" />
-                <span>
-                  <span className="font-medium text-slate-800 dark:text-slate-100">Company:</span>{' '}
-                  {project.company}
-                </span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
-                <Calendar size={16} className="shrink-0 text-brand-500" />
-                <span>
-                  <span className="font-medium text-slate-800 dark:text-slate-100">Duration:</span>{' '}
-                  {project.period}
-                </span>
-              </div>
-            </div>
-
-            <div className="mt-6 space-y-4">
-              {project.fullDescription.map((paragraph, index) => (
-                <p
-                  key={index}
-                  className="text-sm leading-relaxed text-slate-600 sm:text-base dark:text-slate-300"
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-
-            <div className="mt-6">
-              <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-slate-800 dark:text-slate-100">
-                <Code2 size={16} className="text-brand-500" />
-                Technologies Used
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
-                  <span key={tech} className="tag-pill px-3 py-1.5">
-                    {tech}
+            <div className="scrollbar-hide min-h-0 flex-1 overflow-y-auto overscroll-contain p-6 pt-4 sm:p-8 sm:pt-5">
+              <div className="flex flex-wrap gap-4 text-sm">
+                <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+                  <Building2 size={16} className="shrink-0 text-brand-500" />
+                  <span>
+                    <span className="font-medium text-slate-800 dark:text-slate-100">Company:</span>{' '}
+                    {project.company}
                   </span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+                  <Calendar size={16} className="shrink-0 text-brand-500" />
+                  <span>
+                    <span className="font-medium text-slate-800 dark:text-slate-100">Duration:</span>{' '}
+                    {project.period}
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-6 space-y-4">
+                {project.fullDescription.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-sm leading-relaxed text-slate-600 sm:text-base dark:text-slate-300"
+                  >
+                    {paragraph}
+                  </p>
                 ))}
+              </div>
+
+              <div className="mt-6 pb-2">
+                <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-slate-800 dark:text-slate-100">
+                  <Code2 size={16} className="text-brand-500" />
+                  Technologies Used
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span key={tech} className="tag-pill px-3 py-1.5">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
