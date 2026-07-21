@@ -8,6 +8,11 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/hari-doolla',
 }
 
+export const resumeFile = {
+  path: '/resume.pdf',
+  downloadName: 'Doolla_Hari_Resume.pdf',
+}
+
 export const summary = [
   'Across telecom, healthcare, logistics, and data platforms, I have partnered with cross-functional teams including product owners, QA, DevOps, and backend engineers to deliver on tight timelines without compromising code quality or user experience.',
   'I bring a hands-on, ownership-driven mindset: mentoring junior developers, setting up quality pipelines with SonarQube and automated testing, and staying current with emerging tools so every release is faster, safer, and more reliable than the last.',

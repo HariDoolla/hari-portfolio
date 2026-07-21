@@ -36,16 +36,33 @@ export function getExperienceDuration(now = new Date()): ExperienceDuration {
   }
 }
 
-export function formatExperience(now = new Date()): string {
+/** Apply display rounding: 10+ months → next full year. */
+function getDisplayDuration(now = new Date()): ExperienceDuration {
   const { years, months } = getExperienceDuration(now)
 
-  if (years === 0 && months === 0) return '0 months'
-  if (years === 0) return months === 1 ? '1 month' : `${months} months`
-  if (months === 0) return years === 1 ? '1 year' : `${years} years`
+  if (months >= 10) {
+    return { years: years + 1, months: 0 }
+  }
 
-  const yearLabel = years === 1 ? '1 year' : `${years} years`
-  const monthLabel = months === 1 ? '1 month' : `${months} months`
-  return `${yearLabel} ${monthLabel}`
+  return { years, months }
+}
+
+function formatYearLabel(years: number): string {
+  return years === 1 ? '1 year' : `${years} years`
+}
+
+function formatMonthLabel(months: number): string {
+  return months === 1 ? '1 month' : `${months} months`
+}
+
+export function formatExperience(now = new Date()): string {
+  const { years, months } = getDisplayDuration(now)
+
+  if (years === 0 && months === 0) return '0 months'
+  if (years === 0) return formatMonthLabel(months)
+  if (months === 0) return formatYearLabel(years)
+
+  return `${formatYearLabel(years)} ${formatMonthLabel(months)}`
 }
 
 export function formatExperienceBadge(now = new Date()): string {
