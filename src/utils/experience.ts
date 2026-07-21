@@ -1,0 +1,65 @@
+/** Career start: September 1, 2018 */
+const CAREER_START_YEAR = 2018
+const CAREER_START_MONTH = 8 // September (0-indexed)
+
+export interface ExperienceDuration {
+  years: number
+  months: number
+}
+
+function getReferenceMonth(now: Date): { year: number; month: number } {
+  let year = now.getFullYear()
+  let month = now.getMonth()
+
+  // Before the 15th: count experience through the previous month only.
+  if (now.getDate() < 15) {
+    month -= 1
+    if (month < 0) {
+      month = 11
+      year -= 1
+    }
+  }
+
+  return { year, month }
+}
+
+export function getExperienceDuration(now = new Date()): ExperienceDuration {
+  const { year, month } = getReferenceMonth(now)
+  const totalMonths = Math.max(
+    0,
+    (year - CAREER_START_YEAR) * 12 + (month - CAREER_START_MONTH),
+  )
+
+  return {
+    years: Math.floor(totalMonths / 12),
+    months: totalMonths % 12,
+  }
+}
+
+export function formatExperience(now = new Date()): string {
+  const { years, months } = getExperienceDuration(now)
+
+  if (years === 0 && months === 0) return '0 months'
+  if (years === 0) return months === 1 ? '1 month' : `${months} months`
+  if (months === 0) return years === 1 ? '1 year' : `${years} years`
+
+  const yearLabel = years === 1 ? '1 year' : `${years} years`
+  const monthLabel = months === 1 ? '1 month' : `${months} months`
+  return `${yearLabel} ${monthLabel}`
+}
+
+export function formatExperienceBadge(now = new Date()): string {
+  return `${formatExperience(now)} Exp.`
+}
+
+export function formatExperienceHero(now = new Date()): string {
+  return `${formatExperience(now)} of Experience`
+}
+
+export function formatExperienceSubtitle(now = new Date()): string {
+  return `${formatExperience(now)} of building, mentoring, and delivering across startups, consulting firms, and global enterprises.`
+}
+
+export function formatAboutLead(now = new Date()): string {
+  return `With ${formatExperience(now)} in software development, I specialize in building high-performance web applications using React.js, Redux, TypeScript, Node.js, and modern JavaScript. I enjoy turning complex business requirements into clean, maintainable products that users actually love to work with.`
+}
