@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, Moon, Sun, X } from 'lucide-react'
 import { navLinks } from '../data/resume'
@@ -31,6 +31,17 @@ export default function Navbar() {
     element?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  useEffect(() => {
+    if (!open) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [open])
+
   return (
     <header className="glass-nav fixed inset-x-0 top-0 z-50">
       <nav className="section-container flex h-16 items-center justify-between">
@@ -38,6 +49,8 @@ export default function Navbar() {
           type="button"
           className="rounded-lg border border-slate-300/90 bg-white/60 p-2 text-slate-600 shadow-sm backdrop-blur-sm transition hover:border-slate-400 hover:bg-white/80 md:hidden dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:shadow-none dark:hover:bg-white/10"
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-nav-menu"
           onClick={() => setOpen((prev) => !prev)}
         >
           {open ? <X size={18} /> : <Menu size={18} />}
@@ -82,9 +95,11 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            id="mobile-nav-menu"
+            initial={{ opacity: 0, maxHeight: 0 }}
+            animate={{ opacity: 1, maxHeight: 400 }}
+            exit={{ opacity: 0, maxHeight: 0 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden border-t border-white/20 md:hidden dark:border-white/10"
           >
             <ul className="section-container flex flex-col gap-1 py-4">
