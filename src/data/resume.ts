@@ -2,7 +2,9 @@ export const profile = {
   name: 'Doolla Hari',
   title: 'Senior Frontend Developer',
   tagline:
-    'Senior Frontend Developer with 8+ years building scalable, high-performance web applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics.',
+    'Senior Frontend Developer with 8+ years of experience developing scalable, high-performance web applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics.',
+  professionalSummary:
+    'Senior Frontend Developer with 8+ years of experience developing scalable, high-performance web applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics. Skilled in React.js, TypeScript, JavaScript (ES6+), Redux, HTML5, CSS3, and modern UI libraries. Experienced in designing reusable component architectures, implementing automated testing with Playwright and Jest, optimizing application performance, and maintaining code quality through SonarQube and CI/CD practices.',
   email: 'haridoolla36@gmail.com',
   phone: '+91 8297782907',
   linkedin: 'https://www.linkedin.com/in/hari-doolla',
@@ -12,17 +14,15 @@ export const profile = {
 export const resumeFiles = {
   pdf: {
     path: '/resume.pdf',
-    downloadName: 'Doolla_Hari_Resume.pdf',
+    downloadName: 'Doolla Hari.pdf',
   },
   docx: {
     path: '/resume.docx',
-    downloadName: 'Doolla_Hari_Resume.docx',
+    downloadName: 'Doolla Hari.docx',
   },
 }
 
-export const summary = [
-  'Skilled in React.js, TypeScript, JavaScript (ES6+), Redux, HTML5, CSS3, and modern UI libraries. Experienced in designing reusable component architectures, implementing automated testing with Playwright and Jest, optimizing application performance, and maintaining code quality through SonarQube and CI/CD practices.',
-]
+export const summary: string[] = []
 
 export interface SkillItem {
   name: string
@@ -61,6 +61,7 @@ export const skillsWithIcons: SkillItem[] = [
   { name: 'Agile', letterIcon: 'A', url: 'https://agilemanifesto.org' },
   { name: 'Scrum', letterIcon: 'S', url: 'https://www.scrum.org' },
   { name: 'Kanban', letterIcon: 'K', url: 'https://kanban.university' },
+  { name: 'Waterfall', letterIcon: 'W', url: 'https://en.wikipedia.org/wiki/Waterfall_model' },
   { name: 'Jira', icon: devicon('jira'), url: 'https://www.atlassian.com/software/jira' },
   { name: 'VS Code', icon: devicon('vscode'), url: 'https://code.visualstudio.com' },
   { name: 'Figma', icon: devicon('figma'), url: 'https://www.figma.com' },
@@ -238,13 +239,13 @@ export const education = [
   {
     degree: 'Master of Computer Applications (MCA)',
     score: '77%',
-    institution: 'P.B. Siddhartha College of Arts & Science, Vijayawada, Andhra Pradesh',
+    institution: 'P.B. Siddhartha College of Arts & Science | Vijayawada, Andhra Pradesh',
     period: '2015 – 2018',
   },
   {
     degree: 'Bachelor of Science (B.Sc.)',
     score: '66%',
-    institution: 'Sri Harshini Degree College, Ongole, Andhra Pradesh',
+    institution: 'Sri Harshini Degree College | Ongole, Andhra Pradesh',
     period: '2012 – 2015',
   },
 ]

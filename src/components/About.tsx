@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
-import { summary, profile, sectionCopy } from '../data/resume'
-import { formatAboutLead, formatExperienceBadge } from '../utils/experience'
+import { profile, sectionCopy } from '../data/resume'
 import AnimatedSection from './AnimatedSection'
 import ProfileImage from './ProfileImage'
 import { staggerContainer, fadeUp } from '../utils/animations'
@@ -26,7 +25,7 @@ export default function About() {
                       {profile.title}
                     </p>
                     <span className="tag-pill mt-2 inline-block">
-                      {formatExperienceBadge()}
+                      8+ Years Exp.
                     </span>
                   </div>
                 </div>
@@ -39,21 +38,11 @@ export default function About() {
                   className="space-y-5"
                 >
                   <motion.p
-                    key="lead"
                     variants={fadeUp}
                     className="text-base leading-relaxed text-slate-600 dark:text-slate-300"
                   >
-                    {formatAboutLead()}
+                    {profile.professionalSummary}
                   </motion.p>
-                  {summary.map((paragraph, index) => (
-                    <motion.p
-                      key={index}
-                      variants={fadeUp}
-                      className="text-base leading-relaxed text-slate-600 dark:text-slate-300"
-                    >
-                      {paragraph}
-                    </motion.p>
-                  ))}
                 </motion.div>
               </div>
         </div>

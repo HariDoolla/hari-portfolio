@@ -21,5 +21,10 @@
       ]
     }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/((?!resume\\.pdf|resume\\.docx|favicon\\.svg|theme-init\\.js|profile\\.jpg|assets/).*)",
+      "destination": "/index.html"
+    }
+  ]
 }

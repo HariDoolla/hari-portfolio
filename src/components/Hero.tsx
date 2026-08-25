@@ -81,7 +81,7 @@ export default function Hero() {
               className="btn-glass"
             >
               <Download size={16} />
-              PDF
+              Download PDF
             </a>
             <a
               href={resumeFiles.docx.path}
@@ -89,7 +89,7 @@ export default function Hero() {
               className="btn-glass"
             >
               <FileText size={16} />
-              DOCX
+              Download DOCX
             </a>
           </motion.div>
 

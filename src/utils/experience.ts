@@ -69,8 +69,8 @@ export function formatExperienceBadge(now = new Date()): string {
   return `${formatExperience(now)} Exp.`
 }
 
-export function formatExperienceHero(now = new Date()): string {
-  return `${formatExperience(now)} of Experience`
+export function formatExperienceHero(): string {
+  return '8+ Years of Experience'
 }
 
 export function formatExperienceSubtitle(now = new Date()): string {
