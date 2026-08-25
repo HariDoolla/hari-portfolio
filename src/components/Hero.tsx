@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { Download, Link2, Mail, Phone } from 'lucide-react'
-import { profile, resumeFile } from '../data/resume'
+import { Download, ExternalLink, FileText, Link2, Mail, Phone } from 'lucide-react'
+import { profile, resumeFiles } from '../data/resume'
 import { formatExperienceHero } from '../utils/experience'
 import { fadeUp, staggerContainer } from '../utils/animations'
 
@@ -67,12 +67,29 @@ export default function Hero() {
               LinkedIn
             </a>
             <a
-              href={resumeFile.path}
-              download={resumeFile.downloadName}
+              href={resumeFiles.pdf.path}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-glass"
+            >
+              <ExternalLink size={16} />
+              View Resume
+            </a>
+            <a
+              href={resumeFiles.pdf.path}
+              download={resumeFiles.pdf.downloadName}
               className="btn-glass"
             >
               <Download size={16} />
-              Download Resume
+              PDF
+            </a>
+            <a
+              href={resumeFiles.docx.path}
+              download={resumeFiles.docx.downloadName}
+              className="btn-glass"
+            >
+              <FileText size={16} />
+              DOCX
             </a>
           </motion.div>
 

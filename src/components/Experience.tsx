@@ -47,7 +47,7 @@ export default function Experience() {
                         {exp.role}
                       </h3>
                       <p className="mt-0.5 text-sm font-medium text-brand-600 dark:text-brand-400">
-                        {exp.company}
+                        {exp.company} · {exp.location}
                       </p>
                     </div>
                     <span className="mt-1 shrink-0 text-sm font-medium text-slate-500 dark:text-slate-400">

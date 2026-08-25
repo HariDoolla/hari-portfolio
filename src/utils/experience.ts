@@ -74,9 +74,9 @@ export function formatExperienceHero(now = new Date()): string {
 }
 
 export function formatExperienceSubtitle(now = new Date()): string {
-  return `${formatExperience(now)} of building, mentoring, and delivering across startups, consulting firms, and global enterprises.`
+  return `${formatExperience(now)} of building scalable frontend applications across healthcare, telecom, logistics, and data analytics.`
 }
 
 export function formatAboutLead(now = new Date()): string {
-  return `With ${formatExperience(now)} in software development, I specialize in building high-performance web applications using React.js, Redux, TypeScript, Node.js, and modern JavaScript. I enjoy turning complex business requirements into clean, maintainable products that users actually love to work with.`
+  return `With ${formatExperience(now)} in software development, I specialize in building scalable, high-performance web applications using React.js, Redux, TypeScript, JavaScript (ES6+), and modern UI libraries across Healthcare, Telecommunications, Supply Chain, and Data Analytics.`
 }
