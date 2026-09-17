@@ -78,5 +78,5 @@ export function formatExperienceSubtitle(now = new Date()): string {
 }
 
 export function formatAboutLead(now = new Date()): string {
-  return `With ${formatExperience(now)} in software development, I specialize in architecting scalable React applications using TypeScript, JavaScript, Redux, and component-driven UI across Healthcare, Telecommunications, Supply Chain, and Data Analytics.`
+  return `With ${formatExperience(now)} in software development, I specialize in building scalable, high-performance web applications using React.js, TypeScript, JavaScript (ES6+), Redux, HTML5, CSS3, and modern UI libraries across Healthcare, Telecommunications, Supply Chain, and Data Analytics.`
 }

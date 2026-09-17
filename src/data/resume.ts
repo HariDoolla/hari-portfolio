@@ -1,11 +1,11 @@
 export const profile = {
   name: 'Doolla Hari',
-  title: 'Senior Frontend Developer',
+  title: 'Senior Frontend Developer | React.js | TypeScript | JavaScript | Redux',
   stack: 'React.js | TypeScript | JavaScript | Redux',
   tagline:
-    'Senior Frontend Developer with 8+ years of experience architecting and delivering scalable React applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics.',
+    'Senior Frontend Developer with 8+ years of experience developing scalable, high-performance web applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics.',
   professionalSummary:
-    'Senior Frontend Developer with 8+ years of experience architecting and delivering scalable React applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics. Strong expertise in React.js, TypeScript, JavaScript, Redux, and component-driven architecture, with experience building reusable, configurable, and high-performance enterprise UIs. Hands-on with REST APIs, Jest, Playwright, SonarQube, and modern frontend development practices, with experience mentoring developers and collaborating in Agile teams.',
+    'Senior Frontend Developer with 8+ years of experience developing scalable, high-performance web applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics. Skilled in React.js, TypeScript, JavaScript (ES6+), Redux, HTML5, CSS3, and modern UI libraries. Experienced in designing reusable component architectures, implementing automated testing with Playwright and Jest, optimizing application performance, and maintaining code quality through SonarQube and CI/CD practices.',
   email: 'haridoolla36@gmail.com',
   phone: '+91 8297782907',
   linkedin: 'https://www.linkedin.com/in/hari-doolla',

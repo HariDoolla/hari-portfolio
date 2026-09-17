@@ -21,7 +21,7 @@ export default function About() {
                     <p className="font-display text-lg font-bold text-slate-900 dark:text-white">
                       {profile.name}
                     </p>
-                    <p className="text-sm font-medium text-brand-600 dark:text-brand-400">
+                    <p className="max-w-[220px] text-sm font-medium leading-snug text-brand-600 dark:text-brand-400">
                       {profile.title}
                     </p>
                     <span className="tag-pill mt-2 inline-block">
