@@ -48,6 +48,13 @@ export default function Hero() {
 
           <motion.p
             variants={fadeUp}
+            className="mt-2 text-sm font-medium tracking-wide text-brand-700 sm:text-base dark:text-brand-300"
+          >
+            {profile.stack}
+          </motion.p>
+
+          <motion.p
+            variants={fadeUp}
             className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg dark:text-slate-400"
           >
             {profile.tagline}

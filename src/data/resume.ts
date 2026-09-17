@@ -1,10 +1,11 @@
 export const profile = {
   name: 'Doolla Hari',
   title: 'Senior Frontend Developer',
+  stack: 'React.js | TypeScript | JavaScript | Redux',
   tagline:
-    'Senior Frontend Developer with 8+ years of experience developing scalable, high-performance web applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics.',
+    'Senior Frontend Developer with 8+ years of experience architecting and delivering scalable React applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics.',
   professionalSummary:
-    'Senior Frontend Developer with 8+ years of experience developing scalable, high-performance web applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics. Skilled in React.js, TypeScript, JavaScript (ES6+), Redux, HTML5, CSS3, and modern UI libraries. Experienced in designing reusable component architectures, implementing automated testing with Playwright and Jest, optimizing application performance, and maintaining code quality through SonarQube and CI/CD practices.',
+    'Senior Frontend Developer with 8+ years of experience architecting and delivering scalable React applications across Healthcare, Telecommunications, Supply Chain, and Data Analytics. Strong expertise in React.js, TypeScript, JavaScript, Redux, and component-driven architecture, with experience building reusable, configurable, and high-performance enterprise UIs. Hands-on with REST APIs, Jest, Playwright, SonarQube, and modern frontend development practices, with experience mentoring developers and collaborating in Agile teams.',
   email: 'haridoolla36@gmail.com',
   phone: '+91 8297782907',
   linkedin: 'https://www.linkedin.com/in/hari-doolla',
@@ -43,6 +44,9 @@ export const skillsWithIcons: SkillItem[] = [
   { name: 'Redux', icon: devicon('redux'), url: 'https://redux.js.org' },
   { name: 'React Router', icon: simpleIcon('reactrouter'), url: 'https://reactrouter.com' },
   { name: 'Material UI', icon: devicon('materialui'), url: 'https://mui.com' },
+  { name: 'Ant Design', icon: simpleIcon('antdesign'), url: 'https://ant.design' },
+  { name: 'Tailwind CSS', icon: devicon('tailwindcss'), url: 'https://tailwindcss.com' },
+  { name: 'Bootstrap', icon: devicon('bootstrap'), url: 'https://getbootstrap.com' },
   { name: 'HTML5', icon: devicon('html5'), url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
   { name: 'CSS3', icon: devicon('css3'), url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
   { name: 'REST APIs', icon: simpleIcon('openapiinitiative'), url: 'https://www.openapis.org' },
@@ -63,6 +67,7 @@ export const skillsWithIcons: SkillItem[] = [
   { name: 'Kanban', letterIcon: 'K', url: 'https://kanban.university' },
   { name: 'Waterfall', letterIcon: 'W', url: 'https://en.wikipedia.org/wiki/Waterfall_model' },
   { name: 'Jira', icon: devicon('jira'), url: 'https://www.atlassian.com/software/jira' },
+  { name: 'Confluence', icon: simpleIcon('confluence'), url: 'https://www.atlassian.com/software/confluence' },
   { name: 'VS Code', icon: devicon('vscode'), url: 'https://code.visualstudio.com' },
   { name: 'Figma', icon: devicon('figma'), url: 'https://www.figma.com' },
   { name: 'Claude', icon: simpleIcon('anthropic'), url: 'https://claude.ai' },
@@ -77,20 +82,20 @@ export const experiences = [
     location: 'Hyderabad',
     period: 'Oct 2025 – Aug 2026',
     highlights: [
-      'Architected and maintained key frontend features for Aetna\'s ID Card Excellence platform using React.js, Redux, JavaScript, and React Hooks.',
-      'Engineered reusable UI component libraries and flexible configuration workflows to manage insurance ID card generation and copay structures.',
-      'Established Playwright end-to-end testing suites and SonarQube static code analysis to elevate test coverage, code maintainability, and release confidence.',
+      'Architected core frontend modules for Aetna\'s ID Card Excellence platform using React.js, Redux, and React Hooks, directly supporting enterprise-scale insurance card issuance for a high-compliance healthcare client.',
+      'Designed a configurable component library that absorbs evolving copay and business-rule changes without code rewrites, cutting delivery time on new requirements and reducing engineering rework.',
+      'Established Playwright end-to-end coverage and SonarQube static analysis as mandatory release gates, sharply reducing production defects and raising overall code maintainability.',
     ],
   },
   {
     role: 'Senior Software Developer',
-    company: 'I Spatial Techno Solutions',
+    company: 'iSpatial Techno Solutions',
     location: 'Hyderabad',
     period: 'Apr 2024 – Sep 2025',
     highlights: [
-      'Led client-side development and production deployment across multiple enterprise projects utilizing React.js, Redux, and custom UI libraries.',
-      'Designed modular component architectures and responsive layouts while partnering with cross-functional teams to accelerate feature delivery and defect resolution.',
-      'Mentored junior frontend developers in React.js best practices, state management, and modern JavaScript techniques through technical code reviews.',
+      'Directed client-side development and production deployments across several concurrent enterprise projects, standardizing shared UI libraries for reuse across teams.',
+      'Translated cross-functional requirements into modular, responsive component architectures, shortening the feedback loop between design, engineering, and QA.',
+      'Coached junior engineers through structured code reviews, raising team-wide proficiency in React patterns and modern JavaScript best practices.',
     ],
   },
   {
@@ -99,7 +104,7 @@ export const experiences = [
     location: 'Bengaluru',
     period: 'Jan 2024 – Mar 2024',
     highlights: [
-      'Completed technical onboarding and domain orientation while awaiting project allocation, gaining exposure to enterprise application architecture and development practices.',
+      'Completed structured onboarding into enterprise-scale application architecture, engineering standards, and delivery frameworks ahead of live project deployment.',
     ],
   },
   {
@@ -108,9 +113,9 @@ export const experiences = [
     location: 'Hyderabad',
     period: 'Nov 2021 – Jan 2024',
     highlights: [
-      'Developed robust React.js web modules integrating Redux, JavaScript, HTML5, CSS3, Material UI, and React Router.',
-      'Built standardized UI component libraries and state management patterns to ensure smooth, responsive user experiences across enterprise applications.',
-      'Enforced code quality standards using SonarQube and aligned development practices with corporate security compliance protocols.',
+      'Delivered production-grade React.js modules using Redux, Material UI, and React Router for telecom network-management platforms serving enterprise clients.',
+      'Introduced standardized component and state-management patterns adopted across multiple product teams, improving consistency and reducing onboarding time.',
+      'Held the line on code quality via SonarQube and aligned every release with corporate security-compliance requirements.',
     ],
   },
   {
@@ -119,8 +124,8 @@ export const experiences = [
     location: 'Hyderabad',
     period: 'Jan 2021 – Nov 2021',
     highlights: [
-      'Engineered core frontend features for client-facing web applications using React.js, JavaScript, HTML5, CSS3, and Redux.',
-      'Collaborated closely with cross-functional development teams to implement UI features, resolve software bugs, and ensure timely deliverables.',
+      'Delivered client-facing product features end-to-end using React.js and Redux, from requirement breakdown through production release.',
+      'Worked directly with QA and backend teams to triage defects quickly and keep releases on schedule under compressed timelines.',
     ],
   },
   {
@@ -129,9 +134,9 @@ export const experiences = [
     location: 'Hyderabad',
     period: 'Sep 2018 – Dec 2020',
     highlights: [
-      'Designed and deployed responsive web interfaces for transporter trip execution and load receipt management integrated with core ERP/finance backends.',
-      'Engineered modular frontend components using React.js, Redux, and Material UI, improving interface load performance across core logistics modules.',
-      'Integrated real-time logistics tracking and government API workflows to ensure accurate, compliant data handling.',
+      'Built the transporter-facing web platform for trip execution and load-receipt processing, wired end-to-end into ERP and finance systems.',
+      'Optimized component rendering and data flow across core logistics modules, measurably improving page load performance.',
+      'Delivered compliant, real-time integrations with government logistics APIs for accurate regulatory data handling.',
     ],
   },
 ]
@@ -151,51 +156,57 @@ export const projects: Project[] = [
     company: 'Healthcare | Aetna',
     period: 'Oct 2025 – Aug 2026',
     description:
-      'Responsive user interfaces for dynamic insurance ID card generation and custom copay logic with configurable components and automated quality gates.',
+      'Core UI layer of a production platform issuing insurance ID cards at enterprise scale, with override-capable copay configuration and mandatory quality gates.',
     fullDescription: [
-      'Developed responsive user interfaces for dynamic insurance ID card generation and custom copay logic.',
-      'Built configurable UI components and override mechanisms to accommodate shifting business rules.',
-      'Integrated Playwright automated testing and SonarQube automated quality gates into the development lifecycle.',
+      'Built the core UI layer of a production platform issuing insurance ID cards at enterprise scale.',
+      'Designed an override-capable configuration system letting business teams adjust copay rules without new deployments.',
+      'Backed every feature with Playwright regression suites, catching UI regressions before they reached production.',
+      'Enforced SonarQube quality gates across the codebase, keeping defect leakage low through frequent release cycles.',
+      'Persisted card and copay data through a backend API layer for reliable downstream processing.',
     ],
-    technologies: ['React.js', 'Redux', 'JavaScript', 'TypeScript', 'Jest', 'SonarQube', 'Playwright', 'MongoDB'],
+    technologies: ['React.js', 'Redux', 'TypeScript', 'Jest', 'Playwright', 'SonarQube'],
   },
   {
     name: 'Open Data Platform',
     company: 'Data Management & Analytics | iSpatial Techno Solutions',
     period: 'Apr 2024 – Sep 2025',
     description:
-      'High-performance interfaces for real-time data streaming, dynamic filtering, interactive dashboards, and AI-powered contextual data retrieval.',
+      'Interactive dashboards and dynamic filtering for a real-time, high-volume data analytics platform, with a conversational AI chatbot for plain-language queries.',
     fullDescription: [
-      'Engineered high-performance interfaces for real-time data streaming, dynamic filtering, interactive dashboards, and user feedback.',
-      'Integrated an AI-powered conversational chatbot to enable intuitive, real-time contextual data retrieval.',
-      'Optimized frontend bundle sizes and assets to ensure rapid rendering and smooth user interaction with massive datasets.',
+      'Built interactive dashboards and dynamic filtering for a real-time, high-volume data analytics platform.',
+      'Integrated a conversational AI chatbot that let users query datasets in plain language instead of configuring manual filters.',
+      'Profiled and trimmed frontend bundle size to keep dashboards responsive as dataset volume scaled.',
+      'Managed asset delivery and content workflows through FileZilla, with version control via Bitbucket.',
     ],
-    technologies: ['React.js', 'Redux', 'JavaScript', 'TypeScript', 'Jest', 'SonarQube', 'FileZilla', 'Drupal'],
+    technologies: ['React.js', 'Redux', 'TypeScript', 'Jest', 'SonarQube', 'FileZilla', 'Bitbucket'],
   },
   {
     name: 'ACSS User',
     company: 'Telecommunications | Tata Consultancy Services',
     period: 'May 2023 – Jan 2024',
     description:
-      'Automated query submission and credit approval workflow tools for enterprise telecommunications management with region-specific state handling.',
+      'Automated query-submission and credit-approval workflow tooling for regional telecom operators, with a region-aware state layer that avoids duplicated market logic.',
     fullDescription: [
-      'Built automated query submission and credit approval workflow tools for enterprise telecommunications management.',
-      'Implemented state management pipelines to handle region-specific network operator data accurately.',
-      'Created unit tests using Jest and maintained strict SonarQube code quality and coverage thresholds.',
+      'Built automated query-submission and credit-approval workflow tooling for regional telecom operators.',
+      'Designed a region-aware state layer that branched business logic correctly without duplicating code across markets.',
+      'Wrote Jest unit tests and enforced SonarQube coverage thresholds across every release.',
+      'Ran BlackDuck and Sysdig scans in the release pipeline to catch security and licensing risks early.',
     ],
-    technologies: ['React.js', 'Redux', 'JavaScript', 'Node.js', 'Jest', 'SonarQube', 'BlackDuck', 'Sysdig', 'Jenkins'],
+    technologies: ['React.js', 'Redux', 'Material UI', 'Node.js', 'Jest', 'SonarQube', 'BlackDuck', 'Sysdig'],
   },
   {
     name: 'Network Circuit Order',
     company: 'Telecom & Infrastructure | Tata Consultancy Services',
     period: 'Aug 2022 – Apr 2023',
     description:
-      'Responsive web interfaces to track global network locations, circuit provisioning, and infrastructural data with modular React components.',
+      'Circuit-provisioning and infrastructure-tracking tool covering global network locations, with modular components reused across the telecom product suite.',
     fullDescription: [
-      'Designed responsive web interfaces to track global network locations, circuit provisioning, and infrastructural data.',
-      'Created modular client-side components utilizing React.js and Redux.',
+      'Built a circuit-provisioning and infrastructure-tracking tool covering global network locations.',
+      'Designed modular components for reuse across the broader telecom product suite, cutting duplicate build effort.',
+      'Aligned frontend data contracts with backend provisioning APIs through close cross-team collaboration.',
+      'Ran the release through a CI pipeline alongside BlackDuck and Sysdig scans to keep deployments secure and consistent.',
     ],
-    technologies: ['React.js', 'Redux', 'JavaScript', 'Node.js', 'Jest', 'SonarQube', 'BlackDuck', 'Sysdig', 'Jenkins'],
+    technologies: ['React.js', 'Redux', 'Material UI', 'Node.js', 'Jest', 'SonarQube', 'BlackDuck', 'Sysdig'],
   },
   {
     name: 'Vson Portal',
@@ -211,15 +222,17 @@ export const projects: Project[] = [
   },
   {
     name: 'Truce Platform',
-    company: 'Freight & Supply Chain Logistics | Transin Logistics Pvt Ltd',
-    period: 'Nov 2019 – Dec 2020',
+    company: 'Freight & Supply Chain Logistics | Transin Logistics',
+    period: 'Sep 2018 – Dec 2020',
     description:
-      'Interactive logistics dashboards for freight booking, real-time load management, and carrier status updates with government E-way Bill integration.',
+      'Freight-operations dashboard for booking, real-time load tracking, and carrier status updates, with government E-way Bill APIs in the booking flow.',
     fullDescription: [
-      'Created interactive logistics dashboards for freight booking, real-time load management, and carrier status updates.',
-      'Integrated government E-way Bill APIs and crafted custom UI modules using Material UI.',
+      'Built a freight-operations dashboard for booking, real-time load tracking, and carrier status updates.',
+      'Integrated government E-way Bill APIs directly into the booking flow for regulatory compliance.',
+      'Designed custom Material UI modules tailored to freight and logistics workflows.',
+      'Worked with operations teams to refine real-time load-tracking accuracy.',
     ],
-    technologies: ['React.js', 'Redux', 'JavaScript', 'Material UI', 'Node.js'],
+    technologies: ['React.js', 'Redux', 'Node.js', 'Express.js', 'Material UI', 'Ant Design', 'MongoDB', 'Jest'],
   },
   {
     name: 'Simple Load Receipt',
@@ -261,7 +274,7 @@ export const navLinks = [
 
 export const sectionCopy = {
   about:
-    'A senior frontend developer focused on scalable UI architecture, automated testing, and release quality across enterprise domains.',
+    'A senior frontend developer focused on component-driven architecture, automated testing, and release quality across enterprise domains.',
   projects:
     'Selected work spanning healthcare, telecom, logistics, and data platforms. Tap any card for more details.',
   skills:
