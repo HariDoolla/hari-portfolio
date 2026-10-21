@@ -71,9 +71,9 @@
     @apply rounded-lg border border-slate-300/70 bg-white/90 px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm dark:border-slate-600/50 dark:bg-slate-800/40 dark:text-slate-300 dark:shadow-none;
   }
 
-  /* Glass card with gradient sheen */
+  /* Frosted glass card — translucent fill, soft edge, inner sheen */
   .card-surface {
-    @apply relative overflow-hidden rounded-2xl border border-slate-200/70 bg-white/85 shadow-md shadow-slate-200/50 backdrop-blur-xl dark:border-slate-700/40 dark:bg-slate-900/75 dark:shadow-black/30;
+    @apply relative overflow-hidden rounded-2xl border border-slate-200/70 bg-white/70 shadow-[0_8px_32px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-cyan-400/15 dark:bg-slate-950/65 dark:shadow-[0_8px_32px_rgba(0,0,0,0.37)];
   }
 
   .card-surface::before {
@@ -82,20 +82,22 @@
     inset: 0;
     background: linear-gradient(
       135deg,
-      rgba(99, 102, 241, 0.04) 0%,
-      rgba(139, 92, 246, 0.02) 40%,
-      rgba(6, 182, 212, 0.01) 100%
+      rgba(99, 102, 241, 0.06) 0%,
+      transparent 42%,
+      rgba(6, 182, 212, 0.04) 100%
     );
     pointer-events: none;
     border-radius: inherit;
+    opacity: 0.7;
+    transition: opacity 0.35s ease;
   }
 
   .dark .card-surface::before {
     background: linear-gradient(
       135deg,
-      rgba(99, 102, 241, 0.08) 0%,
-      rgba(139, 92, 246, 0.05) 40%,
-      rgba(6, 182, 212, 0.03) 100%
+      rgba(34, 211, 238, 0.08) 0%,
+      transparent 45%,
+      rgba(139, 92, 246, 0.08) 100%
     );
   }
 
@@ -109,8 +111,8 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(99, 102, 241, 0.4),
-      rgba(139, 92, 246, 0.3),
+      rgba(99, 102, 241, 0.45),
+      rgba(6, 182, 212, 0.3),
       transparent
     );
     pointer-events: none;
@@ -121,29 +123,34 @@
     z-index: 1;
   }
 
-  /* About section: cleaner surface in dark mode without gradient wash */
-  .about-card.card-surface::before {
-    display: none;
+  /* Hover: glow traces the full perimeter, card lifts slightly */
+  .card-surface-interactive {
+    @apply transition-[border-color,box-shadow,transform,background-color] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)];
+  }
+
+  .card-surface-interactive:hover {
+    @apply -translate-y-1 scale-[1.01] border-brand-400/80 bg-white/90 shadow-[0_0_0_1px_rgba(99,102,241,0.35),0_14px_45px_-10px_rgba(99,102,241,0.4)] dark:border-cyan-400/55 dark:bg-slate-950/90 dark:shadow-[0_0_0_1px_rgba(56,189,248,0.4),0_15px_40px_-10px_rgba(6,182,212,0.35)];
+  }
+
+  .card-surface-interactive:hover::before {
+    opacity: 1;
+  }
+
+  .dark .card-surface-interactive:hover::after {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(34, 211, 238, 0.7),
+      rgba(165, 180, 252, 0.4),
+      transparent
+    );
   }
 
   .about-card.card-surface::after {
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(99, 102, 241, 0.15),
-      transparent
-    );
-  }
-
-  .dark .about-card.card-surface {
-    @apply border-slate-700/60 bg-slate-900/90 shadow-black/40;
-  }
-
-  .dark .about-card.card-surface::after {
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(148, 163, 184, 0.12),
+      rgba(99, 102, 241, 0.2),
       transparent
     );
   }

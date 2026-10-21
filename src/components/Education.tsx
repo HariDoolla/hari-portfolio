@@ -24,7 +24,7 @@ export default function Education() {
             <motion.div
               key={item.degree}
               variants={fadeUp}
-              className="card-surface flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between"
+              className="card-surface card-surface-interactive flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between"
             >
               <div className="flex gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-50 dark:bg-brand-950/50">

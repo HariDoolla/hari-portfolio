@@ -158,7 +158,7 @@ function SkillMarqueeRow({
             target="_blank"
             rel="noopener noreferrer"
             draggable={false}
-            className="flex shrink-0 items-center gap-3 rounded-xl border border-slate-200/70 bg-white/85 px-4 py-2.5 shadow-sm transition hover:border-brand-300 hover:bg-white hover:shadow-md select-none dark:border-white/10 dark:bg-white/5 dark:hover:border-brand-500/40 dark:hover:bg-white/10"
+            className="flex shrink-0 items-center gap-3 rounded-xl border border-slate-200/70 bg-white/70 px-4 py-2.5 shadow-sm backdrop-blur-md transition-[border-color,box-shadow,background-color,transform] duration-300 select-none hover:-translate-y-0.5 hover:border-brand-400/80 hover:bg-white/90 hover:shadow-[0_0_0_1px_rgba(99,102,241,0.3),0_8px_24px_-8px_rgba(99,102,241,0.35)] dark:border-cyan-400/15 dark:bg-slate-950/50 dark:hover:border-cyan-400/50 dark:hover:bg-slate-950/80 dark:hover:shadow-[0_0_0_1px_rgba(56,189,248,0.35),0_8px_24px_-8px_rgba(6,182,212,0.3)]"
             aria-label={`Visit ${skill.name} official website`}
           >
             <SkillIcon skill={skill} />

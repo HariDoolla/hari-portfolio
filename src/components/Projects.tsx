@@ -31,9 +31,7 @@ export default function Projects() {
               <motion.article
                 key={project.name}
                 variants={scaleIn}
-                whileHover={{ y: -4 }}
-                transition={{ duration: 0.2 }}
-                className="card-surface group flex cursor-pointer flex-col p-6 transition-shadow hover:shadow-md"
+                className="card-surface card-surface-interactive group flex cursor-pointer flex-col p-6"
                 onClick={() => setSelectedProject(project)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {

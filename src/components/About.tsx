@@ -13,7 +13,7 @@ export default function About() {
           <p className="section-subtitle mx-auto">{sectionCopy.about}</p>
         </div>
 
-        <div className="about-card card-surface mx-auto mt-12 max-w-5xl p-6 sm:p-10">
+        <div className="about-card card-surface card-surface-interactive mx-auto mt-12 max-w-5xl p-6 sm:p-10">
               <div className="grid items-center gap-10 lg:grid-cols-[240px_1fr]">
                 <div className="flex flex-col items-center gap-4">
                   <ProfileImage size="md" />

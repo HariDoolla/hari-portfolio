@@ -40,7 +40,7 @@ export default function Experience() {
                   <Briefcase size={14} className="text-brand-600 dark:text-brand-400" />
                 </div>
 
-                <div className="card-surface p-5 sm:p-6">
+                <div className="card-surface card-surface-interactive p-5 sm:p-6">
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <h3 className="font-display text-lg font-semibold text-slate-900 dark:text-white">
