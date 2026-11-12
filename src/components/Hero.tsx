@@ -1,10 +1,14 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Download, ExternalLink, FileText, Link2, Mail, Phone } from 'lucide-react'
 import { profile, resumeFiles } from '../data/resume'
 import { formatExperienceHero } from '../utils/experience'
 import { fadeUp, staggerContainer } from '../utils/animations'
+import ResumePreview from './ResumePreview'
 
 export default function Hero() {
+  const [previewOpen, setPreviewOpen] = useState(false)
+
   return (
     <section
       id="home"
@@ -66,15 +70,10 @@ export default function Hero() {
               <Link2 size={16} />
               LinkedIn
             </a>
-            <a
-              href={resumeFiles.pdf.path}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-glass"
-            >
+            <button type="button" onClick={() => setPreviewOpen(true)} className="btn-glass">
               <ExternalLink size={16} />
-              View Resume
-            </a>
+              Preview Resume
+            </button>
             <a
               href={resumeFiles.pdf.path}
               download={resumeFiles.pdf.downloadName}
@@ -115,6 +114,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </motion.div>
+      <ResumePreview open={previewOpen} onClose={() => setPreviewOpen(false)} />
     </section>
   )
 }

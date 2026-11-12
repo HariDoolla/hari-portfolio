@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState, type MouseEvent, type WheelEv
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import type { SkillItem } from '../data/resume'
 import AnimatedSection from './AnimatedSection'
-import { skillsWithIcons, sectionCopy } from '../data/resume'
+import { skillsWithIcons, skillCategories, sectionCopy } from '../data/resume'
 
 function SkillIcon({ skill }: { skill: SkillItem }) {
   if (skill.letterIcon) {
@@ -188,6 +188,23 @@ export default function Skills() {
         <div className="mt-12 space-y-4">
           <SkillMarqueeRow items={topRow} direction="left" />
           <SkillMarqueeRow items={bottomRow} direction="right" />
+        </div>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          {skillCategories.map((category) => (
+            <div key={category.title} className="card-surface p-5">
+              <h3 className="font-display text-sm font-semibold tracking-wide text-brand-700 uppercase dark:text-brand-300">
+                {category.title}
+              </h3>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {category.items.map((item) => (
+                  <span key={item} className="tag-pill">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </AnimatedSection>

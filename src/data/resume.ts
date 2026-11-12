@@ -12,13 +12,15 @@ export const profile = {
   website: 'https://doolla-hari.vercel.app',
 }
 
+const RESUME_CACHE_BUST = '2026-11-12'
+
 export const resumeFiles = {
   pdf: {
-    path: '/resume.pdf',
+    path: `/resume.pdf?v=${RESUME_CACHE_BUST}`,
     downloadName: 'Doolla_Hari_Front-End_Developer.pdf',
   },
   docx: {
-    path: '/resume.docx',
+    path: `/resume.docx?v=${RESUME_CACHE_BUST}`,
     downloadName: 'Doolla_Hari_Front-End_Developer.docx',
   },
 }
@@ -38,7 +40,7 @@ const devicon = (name: string, variant: 'original' | 'plain' = 'original') =>
 const simpleIcon = (name: string) => `https://cdn.simpleicons.org/${name}`
 
 export const skillsWithIcons: SkillItem[] = [
-  { name: 'JavaScript', icon: devicon('javascript'), url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+  { name: 'JavaScript (ES6+)', icon: devicon('javascript'), url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
   { name: 'TypeScript', icon: devicon('typescript'), url: 'https://www.typescriptlang.org' },
   { name: 'HTML5', icon: devicon('html5'), url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
   { name: 'CSS3', icon: devicon('css3'), url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
@@ -55,7 +57,7 @@ export const skillsWithIcons: SkillItem[] = [
   { name: 'Bootstrap', icon: devicon('bootstrap'), url: 'https://getbootstrap.com' },
   { name: 'REST APIs', icon: simpleIcon('openapiinitiative'), url: 'https://www.openapis.org' },
   { name: 'Postman', icon: devicon('postman'), url: 'https://www.postman.com' },
-  { name: 'Swagger', icon: simpleIcon('swagger'), url: 'https://swagger.io' },
+  { name: 'Swagger/OpenAPI', icon: simpleIcon('swagger'), url: 'https://swagger.io' },
   { name: 'Jest', icon: simpleIcon('jest'), url: 'https://jestjs.io' },
   { name: 'Playwright', icon: 'https://playwright.dev/img/playwright-logo.svg', url: 'https://playwright.dev' },
   { name: 'SonarQube', icon: devicon('sonarqube'), url: 'https://www.sonarsource.com/products/sonarqube' },
@@ -76,6 +78,58 @@ export const skillsWithIcons: SkillItem[] = [
   { name: 'Cursor', icon: 'https://cdn.simpleicons.org/cursor', url: 'https://cursor.com' },
   { name: 'GitHub Copilot', icon: simpleIcon('githubcopilot'), url: 'https://github.com/features/copilot' },
   { name: 'Lovable', letterIcon: 'L', url: 'https://lovable.dev' },
+]
+
+export const skillCategories = [
+  {
+    title: 'Languages',
+    items: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3'],
+  },
+  {
+    title: 'Frontend',
+    items: [
+      'React.js',
+      'Next.js',
+      'Redux',
+      'React Hooks',
+      'Context API',
+      'React Router',
+      'Vue.js',
+      'Material UI',
+      'Ant Design',
+      'Tailwind CSS',
+      'Bootstrap',
+    ],
+  },
+  {
+    title: 'UI Engineering',
+    items: [
+      'Responsive Design',
+      'Reusable Components',
+      'Component Architecture',
+      'Frontend Performance Optimization',
+    ],
+  },
+  {
+    title: 'API & Integration',
+    items: ['REST APIs', 'API Integration', 'Postman', 'Swagger/OpenAPI'],
+  },
+  {
+    title: 'Testing & Code Quality',
+    items: ['Jest', 'Playwright', 'SonarQube', 'ESLint', 'Prettier'],
+  },
+  {
+    title: 'Backend Exposure',
+    items: ['Node.js', 'Express.js', 'MongoDB'],
+  },
+  {
+    title: 'Tools & Delivery',
+    items: ['Git', 'Bitbucket', 'Jira', 'Confluence', 'VS Code', 'Agile', 'Scrum', 'Kanban'],
+  },
+  {
+    title: 'AI-Assisted Development',
+    items: ['Claude', 'Cursor', 'GitHub Copilot', 'Lovable'],
+  },
 ]
 
 export const experiences = [
@@ -240,7 +294,7 @@ export const sectionCopy = {
   projects:
     'Selected work spanning healthcare, telecom, logistics, and data platforms. Tap any card for more details.',
   skills:
-    'Languages, frontend libraries, testing, APIs, and delivery tools used to build high-performance applications.',
+    'Languages, frontend, UI engineering, APIs, testing, backend exposure, delivery tools, and AI-assisted development from the latest resume.',
   education:
     'Academic foundation in computer applications that set the stage for a career in software engineering.',
 }
